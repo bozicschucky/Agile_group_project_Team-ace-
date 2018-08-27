@@ -1,3 +1,4 @@
+import uuid
 class User(object):
     """docstring for User"""
 
@@ -6,7 +7,7 @@ class User(object):
 
 
 class Owners(User):
-    def __init__(self,ownerId,ownerName, item):
+    def __init__(self,ownerName, item):
         self.ownerId=uuid.uuid1()
         self.ownerName=ownerName
         self.item = item
@@ -17,8 +18,13 @@ class Owners(User):
 
 
     def see_daily_sales(self):
-        
-        self.daily_sales=daily_sales
+        owner = User('Gloria', 'posho')
+        item =StockItem('posho','500','1000','')
+        items=items.append(item)
+        daily_sales=[items]
+
+
+    
         print (daily_sales)
 
 
@@ -26,7 +32,7 @@ class Owners(User):
         item_stock_balance ={item:stock_balance}
         print (item_stock_balance)
 
-store_owners=[]
+
 
 
 class Managers(User):
@@ -41,3 +47,7 @@ class Attendants(User):
 
     def __init__(self):
         pass
+
+
+store_owners=Owners('Gloria', 'posho')
+store_owners.see_daily_sales()
