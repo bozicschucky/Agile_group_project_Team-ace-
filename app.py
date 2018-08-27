@@ -6,19 +6,23 @@ class User(object):
 
 
 class Owners(User):
-    def __init__(self,ownerId,ownerName):
+    def __init__(self,ownerId,ownerName, item):
         self.ownerId=uuid.uuid1()
         self.ownerName=ownerName
+        self.item = item
+        
+    
+    stock_balance=[]
+    items=[]
+
 
     def see_daily_sales(self):
+        
         self.daily_sales=daily_sales
         print (daily_sales)
 
 
     def see_stock_balances(self):
-        item = item
-
-        stock_balance= stock_balance
         item_stock_balance ={item:stock_balance}
         print (item_stock_balance)
 
