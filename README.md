@@ -15,7 +15,7 @@
 
 # Authors
 
--Gloria
+-RIta
 -Naome
 -Charles
 -Jude
