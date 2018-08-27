@@ -6,9 +6,14 @@ class User(object):
 
 
 class Owners(User):
-    """docstring for Owners"""
+    def __init__(self,ownerId,ownerName):
+        self.ownerId=ownerId
+        self.ownerName=ownerName
 
-    def __init__(self):
+    def see_daily_sales(self):
+        pass
+
+    def see_stock_balances(self):
         pass
 
 
