@@ -49,15 +49,17 @@ class Owners(User):
 class Managers(User):
     """docstring for Managers"""
 
-    def __init__(self):
-        pass
+    def __init__(self, manager_id, manager_name):
+        self.manager_id = manager_id
+        self.manager_name = manager_name
 
 
 class Attendants(User):
     """docstring for Attendants"""
 
-    def __init__(self):
-        pass
+    def __init__(self, attendant_id, attendant_name):
+        self.attendant_id = attendant_id
+        self.attendant_name = attendant_name
 
 
 def print_menu():  # Your menu design here
