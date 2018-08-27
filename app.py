@@ -24,7 +24,7 @@ class StockItem():
 class User(StockItem):
     """docstring for User"""
 
-    def __init__(self, username, role, userid, password):
+    def __init__(self, username, role, password):
         self.username = username
         self.role = role
         self.userid = uuid.uuid1()
@@ -77,7 +77,6 @@ while loop:  # While loop which will keep going until loop = False
 
     if choice == 1:
         print("Menu 1 has been selected")
-        owner = Owners()
         # You can add your code or functions here
     elif choice == 2:
         print("Menu 2 has been selected")
