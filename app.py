@@ -73,18 +73,34 @@ class Owners(User):
 class Managers(User):
     """docstring for Managers"""
 
-    def __init__(self, manager_id, manager_name):
+    def __init__(self, manager_id=1, manager_name="Jude"):
         self.manager_id = manager_id
         self.manager_name = manager_name
+
+    def add_manager(self):
+        manager = []
+        self.manager_id = input("Please enter your id: ")
+        self.manager_name = input("Please enter manager name: ")
+        manager.append(self.manager_id)
+        manager.append( self.manager_name )
+        print (manager)
+
 
 
 class Attendants(User):
     """docstring for Attendants"""
 
-    def __init__(self, attendant_id, attendant_name):
+    def __init__(self, attendant_id = 1, attendant_name = "Naume"):
         self.attendant_id = attendant_id
         self.attendant_name = attendant_name
 
+    def add_attendant(self):
+        attendant = []
+        self.attendant_id = input("Please enter your id: ")
+        self.attendant_name = input("Please enter attendant name: ")
+        attendant.append(self.attendant_id)
+        attendant.append( self.attendant_name)
+        print (attendant)
 
 def print_menu():  # Your menu design here
     print(30 * "-", "MENU", 30 * "-")
@@ -110,11 +126,14 @@ while loop:  # While loop which will keep going until loop = False
         print(items)
     elif choice == 2:
         print("Menu 2 has been selected")
-        Manager = Managers()
+        mng = Managers("1", "jude")
+        mng.add_manager()
+
         # You can add your code or functions here
     elif choice == 3:
         print("Menu 3 has been selected")
-        Attendant = Attendants()
+        attend = Attendants("1", "Naume")
+        attend.add_attendant()
         # You can add your code or functions here
     elif choice == 4:
         print("Menu 4 has been selected")
