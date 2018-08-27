@@ -7,14 +7,22 @@ class User(object):
 
 class Owners(User):
     def __init__(self,ownerId,ownerName):
-        self.ownerId=ownerId
+        self.ownerId=uuid.uuid1()
         self.ownerName=ownerName
 
     def see_daily_sales(self):
-        pass
+        self.daily_sales=daily_sales
+        print (daily_sales)
+
 
     def see_stock_balances(self):
-        pass
+        item = item
+
+        stock_balance= stock_balance
+        item_stock_balance ={item:stock_balance}
+        print (item_stock_balance)
+
+store_owners=[]
 
 
 class Managers(User):
