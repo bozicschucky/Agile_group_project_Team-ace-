@@ -1,13 +1,33 @@
 import time
+import uuid
 
 
-class User(object):
+class StockItem():
+    """docstring for StockItem"""
+
+    def __init__(self, name, purchase_price, sale_price):
+        self.id = uuid.uuid1()
+        self.name = name
+        self.purchase_price = purchase_price
+        self.sale_price = sale_price
+        self.timestamp = time.time()
+
+    def item_added(self):
+        '''adds item '''
+        pass
+
+    def update_stock_balance(self):
+        '''update the stock balance'''
+        pass
+
+
+class User(StockItem):
     """docstring for User"""
 
     def __init__(self, username, role, userid, password):
         self.username = username
         self.role = role
-        self.userid = userid
+        self.userid = uuid.uuid1()
         self.password = password
         self.timestamp = time.time()
 
@@ -41,12 +61,12 @@ class Attendants(User):
 
 
 def print_menu():  # Your menu design here
-    print (30 * "-", "MENU", 30 * "-")
-    print ("1. User as Owner")
-    print ("2. Menu as Manager")
-    print ("3. Menu as Attendant")
-    print ("4. Exit")
-    print (67 * "-")
+    print(30 * "-", "MENU", 30 * "-")
+    print("1. User as Owner")
+    print("2. Menu as Manager")
+    print("3. Menu as Attendant")
+    print("4. Exit")
+    print(67 * "-")
 
 
 loop = True
@@ -60,11 +80,11 @@ while loop:  # While loop which will keep going until loop = False
         owner = Owners()
         # You can add your code or functions here
     elif choice == 2:
-        print ("Menu 2 has been selected")
+        print("Menu 2 has been selected")
         Manager = Managers()
         # You can add your code or functions here
     elif choice == 3:
-        print ("Menu 3 has been selected")
+        print("Menu 3 has been selected")
         Attendant = Attendants()
         # You can add your code or functions here
     elif choice == 4:
