@@ -24,7 +24,7 @@ class StockItem():
 class User(StockItem):
     """docstring for User"""
 
-    def __init__(self, username, role, userid, password):
+    def __init__(self, username, role, password):
         self.username = username
         self.role = role
         self.userid = uuid.uuid1()
@@ -46,20 +46,22 @@ class Owners(User):
         self.item = item
         
     
-    stock_balance=[]
-    items=[]
+        stock_balance=[]
+        
 
 
-    def see_daily_sales(self):
-        owner = User('Gloria', 'posho')
-        item =StockItem('posho','500','1000','')
-        items=items.append(item)
-        daily_sales=[items]
+    def see_daily_sales(self,owner,item):
+        items=[]
+
+        all_items=items.append(owner)
+        all_items=items.append(item)
+        # daily_sales=[items]
+        print (all_items)
+        return all_items
 
 
-store_owners=Owners('Gloria', 'posho')
-store_owners.see_daily_sales()
-        print (daily_sales)
+
+        
 
 
     def see_stock_balances(self):
@@ -101,8 +103,11 @@ while loop:  # While loop which will keep going until loop = False
 
     if choice == 1:
         print("Menu 1 has been selected")
-        owner = Owners()
-        # You can add your code or functions here
+        owner = User('Gloria', 'posho','password')
+        item =StockItem('posho','500','1000')
+        store_owners=Owners('Gloria', 'posho')
+        items = store_owners.see_daily_sales(owner,item)
+        print(items)
     elif choice == 2:
         print("Menu 2 has been selected")
         Manager = Managers()
