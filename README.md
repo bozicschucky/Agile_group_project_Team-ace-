@@ -7,8 +7,8 @@
  - When an item is added, you must keep a timestamp of when this happened and also keep a record of who added the item.
 
 
-# To Project github account 
--https://github.com/bozicschucky/Agile_group_project_Team-ace-/edit/master/README.md
+# To review the github repo
+-https://github.com/bozicschucky/Agile_group_project_Team-ace-/
 
 # Technologies used.
 -Python3
