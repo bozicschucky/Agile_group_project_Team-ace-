@@ -96,8 +96,8 @@ class Attendants(User):
 def print_menu():  # Your menu design here
     print(30 * "-", "MENU", 30 * "-")
     print("1. User as Owner")
-    print("2. Menu as Manager")
-    print("3. Menu as Attendant")
+    print("2. User as Manager")
+    print("3. User as Attendant")
     print("4. Exit")
     print(67 * "-")
 
